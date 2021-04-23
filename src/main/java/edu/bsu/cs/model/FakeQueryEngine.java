@@ -5,7 +5,7 @@ import com.google.inject.Inject;
 import java.time.Duration;
 import java.time.Instant;
 
-//Class considered "unused" after changing the configure method in QueryEngineModule to run with WikipediaQueryEngine.
+//Class may be considered "unused" after implementing WikipediaQueryEngine.
 @SuppressWarnings("unused")
 public final class FakeQueryEngine implements QueryEngine {
 

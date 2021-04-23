@@ -13,9 +13,13 @@ since it was no longer being assigned or used for anything specific.
 
 ## Challenge #2 Complete
 
-(Explain your solution to Challenge #2. If it is not complete, change
-the subsection title above to "Incomplete" and explain how far you got
-and where you got stuck.)
+To solve this challenge, I started by creating a new module, FormatModule, and added it to the App 
+class within the Injector. I then created a new interface that would require a string to be returned 
+and would use a revision from the Revision class as its required argument. 
+After that, I made a new class, called the AlternateFormatter, which is meant to format and return the 
+revision as a string in a more user-friendly way. Finally, I configured the AlternateFormatter class
+within FormatModule using bind(Formatter.class).to(AlternateFormatter.class), injected the Formatter interface within 
+the WikipediaAnalyzer class, and removed the RevisionFormatter class call from the method, runQuery.
 
 ## Challenge #3 Complete
 
