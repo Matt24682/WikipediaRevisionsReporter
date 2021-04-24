@@ -23,9 +23,14 @@ the WikipediaAnalyzer class, and removed the RevisionFormatter class call from t
 
 ## Challenge #3 Complete
 
-(Explain your solution to Challenge #3. If it is not complete, change
-the subsection title above to "Incomplete" and explain how far you got
-and where you got stuck.)
+To solve this challenge, I created a variable called "revisionString" (that was of String type) that first
+used the variable "response", generated from the QueryEngine interface, and used response.revisions()
+to create the list of revisions.Then I converted the list to a stream using .stream() and continued by 
+using .map() to where it would map each of the revisions to the formatter interface. As a result, a 
+string would be returned, and I used .collect() with Collectors.joining("\n") inside to where it would 
+combine all the string revisions into one string in which each revision was displayed on its own line.
+The last step was to change the outputArea from outputting a stringBuilder to outputting the revisionString
+variable.
 
 ## Reflection Question #1: Functional vs OO
 
